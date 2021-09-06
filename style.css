@@ -15,131 +15,133 @@
 	box-sizing: border-box;
 }
 
-	
-	body {
-		background-image: url(./assets/alex-knight-Ys-DBJeX0nE-unsplash.jpg);
-		background-size: cover;
-		background-position: center;
-		background-attachment: fixed;
-		font-family: 'Urbanist', sans-serif;
-		font-size: 2rem;
-		height: 100vh;
-		color: var(--image-white-grey);
+body {
+	background-image: url(./assets/alex-knight-Ys-DBJeX0nE-unsplash.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	font-family: 'Urbanist', sans-serif;
+	font-size: 2rem;
+	height: 100vh;
+	color: var(--image-white-grey);
+}
+
+@keyframes grain {
+	0%,
+	100% {
+		transform: translate(0, 0);
 	}
-	
-	
-	@keyframes grain {
-		0%,
-		100% {
-			transform: translate(0, 0);
-		}
-		10% {
-			transform: translate(-5%, -10%);
-		}
-		20% {
-			transform: translate(-15%, 5%);
-		}
-		30% {
-			transform: translate(7%, -25%);
-		}
-		40% {
-			transform: translate(-5%, 25%);
-		}
-		50% {
-			transform: translate(-15%, 10%);
-		}
-		60% {
-			transform: translate(15%, 0%);
-		}
-		70% {
-			transform: translate(0%, 15%);
-		}
-		80% {
-			transform: translate(3%, 35%);
-		}
-		90% {
-			transform: translate(-10%, 10%);
-		}
+	10% {
+		transform: translate(-5%, -10%);
 	}
-	
-	body::after {
-		z-index: -10;
-		content: '';
-		background-image: url(./assets/cardboard.png);
-		height: 400%;
-		left: -50%;
-		width: 300%;
-		top: -150%;
-		opacity: .25;
-		position: fixed;
-		animation: grain 8s steps(10) infinite;
-		-webkit-animation: grain 8s steps(10) infinite;
+	20% {
+		transform: translate(-15%, 5%);
 	}
-	
-	.main-container {
-		position: relative;
-		height: 100vh;
-		padding: 0 1rem;
+	30% {
+		transform: translate(7%, -25%);
 	}
-	
-	.title {
-		letter-spacing: 8px;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		text-align: center;
+	40% {
+		transform: translate(-5%, 25%);
 	}
-	
-	.title-text {
-		padding: .75rem 0;
+	50% {
+		transform: translate(-15%, 10%);
 	}
-	
-	.text-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 1rem;
-		transform: translateY(2.8rem);
-		-webkit-transform: translateY(2.8rem);
-		-moz-transform: translateY(2.8rem);
-		-ms-transform: translateY(2.8rem);
-		-o-transform: translateY(2.8rem);
+	60% {
+		transform: translate(15%, 0%);
 	}
-	
-	.under-span {
-		font-weight: 600;
+	70% {
+		transform: translate(0%, 15%);
 	}
-	
-	.movie-text {
-		font-weight: 200;
-		font-size: 1.5rem;
-		letter-spacing: 1.5px;
+	80% {
+		transform: translate(3%, 35%);
 	}
-	
-	.name-container {
-		position: absolute;
-		font-size: 1.25rem;
-		font-weight: 200;
-		display: flex;
-		flex-direction: column;
-		letter-spacing: 1px;
-		left: 7px;
-		bottom: 7px;
+	90% {
+		transform: translate(-10%, 10%);
 	}
-	
-	.director {
-		margin-bottom: .25rem;
-	}
-	
-	.director-span {
-		color: var(--image-green);
-		font-weight: 600;
-	}
-	.novel-span {
-		color: var(--image-pink);
-		font-weight: 600;
-	} 
-	
+}
+
+body::after {
+	z-index: -10;
+	content: '';
+	background-image: url(./assets/cardboard.png);
+	height: 400%;
+	left: -50%;
+	width: 300%;
+	top: -150%;
+	opacity: .225;
+	position: fixed;
+	animation: grain 8s steps(10) infinite;
+	-webkit-animation: grain 8s steps(10) infinite;
+}
 
 
+.main-container {
+	height: 100vh;
+	padding: 0 1rem;
+}
+
+.title {
+	letter-spacing: 8px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.title-text {
+	padding: .75rem 0;
+}
+
+.text-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	transform: translateY(2.8rem);
+	-webkit-transform: translateY(2.8rem);
+	-moz-transform: translateY(2.8rem);
+	-ms-transform: translateY(2.8rem);
+	-o-transform: translateY(2.8rem);
+}
+
+.under-span {
+	font-weight: 600;
+}
+
+.movie-text {
+	font-weight: 200;
+	font-size: 1.5rem;
+	letter-spacing: 1.5px;
+}
+
+.name-container {
+	position: absolute;
+	width: 100%;
+	font-size: 1.25rem;
+	font-weight: 200;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	letter-spacing: 1px;
+	left: 50%;
+	bottom: 10px;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+}
+
+.director {
+	margin-bottom: .25rem;
+}
+
+.director-span {
+	color: var(--image-green);
+	font-weight: 600;
+}
+.novel-span {
+	color: var(--image-pink);
+	font-weight: 600;
+}
