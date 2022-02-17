@@ -100,10 +100,9 @@ body::after {
   color: var(--image-pink);
   position: absolute;
   display: flex;
-  flex-direction: column;
   top: 12px;
   right: 0;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   text-align: right;
   letter-spacing: 2px;
@@ -112,6 +111,7 @@ body::after {
 
 .menu-container p:not(:last-of-type) {
   margin-bottom: 0.75rem;
+  margin-right: 1rem;
 }
 
 .menu-container p:hover {
